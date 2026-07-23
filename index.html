@@ -207,7 +207,7 @@
 <!-- Top Navigation Bar -->
 <nav id="topNav" class="fixed top-0 w-full z-50">
 <div class="nav-scrim absolute inset-0 bg-gradient-to-b from-black/30 to-transparent pointer-events-none"></div>
-<div class="nav-inner relative z-10 flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="nav-inner relative z-10 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
 <a class="nav-logo font-headline-sm text-headline-sm transition-transform hover:scale-[1.03]" href="#">Bohemian Apartments</a>
 <div class="hidden md:flex gap-8 items-center">
 <a class="nav-link font-body-md text-body-md uppercase tracking-widest" href="#concept">Concept</a>
@@ -241,17 +241,17 @@
 </div>
 </div>
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center overflow-hidden transition-all duration-1000 opacity-100 translate-y-0">
+<section class="relative min-h-[85vh] md:min-h-screen flex items-center overflow-hidden transition-all duration-1000 opacity-100 translate-y-0">
 <!-- Background video -->
-<video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline poster="assets/concept.jpg?v=4">
+<video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline poster="assets/hero-poster.jpg">
 <source src="assets/hero.mp4" type="video/mp4">
 </video>
 <!-- Dark gradient overlay for text legibility -->
 <div class="absolute inset-0 bg-gradient-to-r from-on-surface/80 via-on-surface/50 to-on-surface/20"></div>
 <!-- Overlaid content -->
-<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full pt-24">
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full pt-24">
 <div class="max-w-2xl space-y-6">
-<h1 class="hero-anim font-display-lg text-display-lg md:text-[80px] text-white leading-none drop-shadow-lg" style="animation-delay:.25s">A New Rhythm of Urban Living.</h1>
+<h1 class="hero-anim font-display-lg text-[36px] sm:text-[44px] md:text-display-lg lg:text-[80px] text-white leading-[1.1] tracking-tight drop-shadow-lg" style="animation-delay:.25s">A New Rhythm of Urban Living.</h1>
 <p class="hero-anim font-body-lg text-body-lg text-white/85 max-w-lg drop-shadow" style="animation-delay:.4s">Boutique residences where creative design meets modern comfort, offering an artful home in the heart of the city.</p>
 <div class="hero-anim pt-4 flex flex-wrap gap-4" style="animation-delay:.55s">
 <a class="btn-shine bg-primary text-on-primary px-8 py-4 font-label-md rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-0.5 transition-all" href="#floorplans">Discover Residences</a>
@@ -266,16 +266,16 @@
 </section>
 <!-- Concept Section -->
 <section class="py-24 bg-surface-container-high transition-all duration-1000 opacity-100 translate-y-0" id="concept">
-<div class="px-margin-desktop max-w-container-max mx-auto grid md:grid-cols-2 gap-16 items-center">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid md:grid-cols-2 gap-16 items-center">
 <div class="order-2 md:order-1 relative reveal reveal-left">
 <div class="absolute -top-10 -left-10 w-40 h-40 azulejo-pattern opacity-20 float"></div>
 <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl">
-<img loading="lazy" decoding="async" class="w-full h-[600px] object-contain bg-surface-container-high" src="assets/concept.jpg?v=4" alt="Warm, sunlit loft interior with leather sofa and plants">
+<img loading="lazy" decoding="async" class="w-full h-[600px] object-cover" src="assets/concept.jpg?v=4" alt="Warm, sunlit loft interior with leather sofa and plants">
 </div>
 </div>
 <div class="order-1 md:order-2 space-y-8">
 <span class="reveal font-headline-sm text-tertiary uppercase tracking-widest block">The Concept</span>
-<h2 class="reveal font-headline-lg text-headline-lg text-on-surface" data-reveal-delay="80">Where the city finds its rhythm at home.</h2>
+<h2 class="reveal font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface" data-reveal-delay="80">Where the city finds its rhythm at home.</h2>
 <div class="space-y-6 font-body-lg text-on-surface-variant">
 <p class="reveal" data-reveal-delay="160">Bohemian was born from the desire to create a sanctuary that resonates with creative energy. Our architecture blends warm materials and clean lines into a contemporary silhouette that breathes with the neighbourhood.</p>
 <p class="reveal" data-reveal-delay="240">Each of the limited units is designed as a singular piece of a larger harmony—offering privacy, expansive light, and a genuine connection to the vibrant life of the district.</p>
@@ -295,9 +295,9 @@
 </section>
 <!-- Location Section -->
 <section class="py-24 transition-all duration-1000 opacity-100 translate-y-0" id="location">
-<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="text-center max-w-2xl mx-auto mb-16">
-<h2 class="reveal font-headline-lg text-headline-lg text-on-surface">At the Heart of the City Center.</h2>
+<h2 class="reveal font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">At the Heart of the City Center.</h2>
 <p class="reveal text-on-surface-variant" data-reveal-delay="120">Perfectly positioned between the lively arts quarter and the quiet residential streets of the old town.</p>
 </div>
 <div class="reveal reveal-scale relative h-[600px] rounded-2xl overflow-hidden border border-outline-variant/30 shadow-inner bg-surface-variant">
@@ -332,11 +332,11 @@
 </section>
 <!-- Floor Plans Section -->
 <section class="py-24 bg-surface-container transition-all duration-1000 opacity-100 translate-y-0" id="floorplans">
-<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="flex justify-between items-end mb-16">
 <div>
 <span class="reveal font-headline-sm text-primary uppercase tracking-widest block mb-2">Residences</span>
-<h2 class="reveal font-headline-lg text-headline-lg" data-reveal-delay="100">Select Your Space</h2>
+<h2 class="reveal font-headline-lg text-headline-lg-mobile md:text-headline-lg" data-reveal-delay="100">Select Your Space</h2>
 </div>
 <div class="hidden md:flex gap-4">
 <button id="unitPrev" aria-label="Previous residences" class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary active:scale-90 transition-all">
@@ -400,10 +400,10 @@
 </section>
 <!-- Amenities Section -->
 <section class="py-24 transition-all duration-1000 opacity-100 translate-y-0" id="amenities">
-<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="grid md:grid-cols-3 gap-16">
 <div>
-<h2 class="reveal font-headline-lg text-headline-lg mb-6">Designed for Living, Not Just Staying.</h2>
+<h2 class="reveal font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6">Designed for Living, Not Just Staying.</h2>
 <p class="reveal text-on-surface-variant mb-8" data-reveal-delay="100">Every detail at Bohemian has been curated to enhance your daily rituals. From the acoustic insulation to the thermal efficiency of our A-rated energy systems.</p>
 <div class="reveal reveal-scale lift p-6 bg-secondary-container/30 rounded-xl border border-secondary-container" data-reveal-delay="180">
 <span class="material-symbols-outlined text-primary text-[40px] mb-4 float">energy_program_saving</span>
@@ -460,10 +460,10 @@
 </section>
 <!-- Gallery Carousel Section -->
 <section class="py-24 bg-surface-container-high overflow-hidden" id="gallery">
-<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="text-center max-w-2xl mx-auto mb-12">
 <span class="reveal font-headline-sm text-primary uppercase tracking-widest block mb-2">Gallery</span>
-<h2 class="reveal font-headline-lg text-headline-lg" data-reveal-delay="100">A Glimpse Inside Bohemian</h2>
+<h2 class="reveal font-headline-lg text-headline-lg-mobile md:text-headline-lg" data-reveal-delay="100">A Glimpse Inside Bohemian</h2>
 </div>
 <div class="reveal reveal-scale relative" data-carousel data-autoplay="5000">
 <div class="overflow-hidden rounded-2xl shadow-2xl">
@@ -514,9 +514,9 @@
 </section>
 <!-- Testimonials Carousel -->
 <section class="py-24 overflow-hidden" id="testimonials">
-<div class="px-margin-desktop max-w-3xl mx-auto text-center">
+<div class="px-margin-mobile md:px-margin-desktop max-w-3xl mx-auto text-center">
 <span class="reveal font-headline-sm text-primary uppercase tracking-widest block mb-2">Voices</span>
-<h2 class="reveal font-headline-lg text-headline-lg mb-12" data-reveal-delay="100">What Residents Say</h2>
+<h2 class="reveal font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-12" data-reveal-delay="100">What Residents Say</h2>
 <div class="reveal relative" data-carousel data-autoplay="6000" data-reveal-delay="160">
 <div class="overflow-hidden">
 <div data-carousel-track class="flex transition-transform duration-700 ease-out">
@@ -552,9 +552,9 @@
 
 <!-- Contact Form Section -->
 <section class="py-24 bg-primary text-on-primary transition-all duration-1000 opacity-100 translate-y-0" id="contact">
-<div class="px-margin-desktop max-w-container-max mx-auto grid md:grid-cols-2 gap-24 items-center">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid md:grid-cols-2 gap-24 items-center">
 <div class="reveal reveal-left">
-<h2 class="font-headline-lg text-headline-lg mb-6">Start Your Journey with Bohemian.</h2>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6">Start Your Journey with Bohemian.</h2>
 <p class="text-primary-fixed mb-8 opacity-80 text-lg">Our dedicated team is ready to provide you with detailed floor plans, brochures, and a private tour of the construction site.</p>
 <div class="space-y-6">
 <div class="flex items-center gap-4">
@@ -657,7 +657,7 @@
 </div>
 <!-- Footer -->
 <footer class="bg-surface-container-high">
-<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-12 max-w-container-max mx-auto gap-8">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto gap-8">
 <div class="flex flex-col items-center md:items-start gap-4">
 <a class="font-headline-md text-headline-md text-primary" href="#">Bohemian Apartments</a>
 <p class="font-body-md text-body-md text-on-surface-variant text-center md:text-left max-w-xs">
