@@ -614,6 +614,19 @@ View Plans
 </div>
 </div>
 </div>
+<!-- Inquiry Success Modal -->
+<div id="inquiryModal" class="fixed inset-0 z-[110] hidden items-center justify-center p-4">
+<div id="imBackdrop" class="absolute inset-0 bg-on-surface/60 backdrop-blur-sm opacity-0 transition-opacity duration-300" onclick="closeInquiryModal()"></div>
+<div id="imDialog" class="relative z-10 bg-surface rounded-2xl shadow-2xl w-full max-w-md p-8 md:p-10 text-center opacity-0 scale-95 translate-y-2 transition-all duration-300 ease-out">
+<button onclick="closeInquiryModal()" aria-label="Close" class="absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+<span class="material-symbols-outlined text-primary text-[56px] mb-4">check_circle</span>
+<h3 id="imTitle" class="font-headline-md text-headline-md text-on-surface mb-3"></h3>
+<p id="imMessage" class="text-on-surface-variant mb-8"></p>
+<button onclick="closeInquiryModal()" class="btn-shine w-full bg-primary text-on-primary py-3 rounded-lg font-label-md hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.98] transition-all"></button>
+</div>
+</div>
 <!-- Footer -->
 <footer class="bg-surface-container-high">
 <div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto gap-8">
@@ -919,8 +932,42 @@ SONETO
         }
 
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') { closeUnitModal(); closeMobileMenu(); }
+            if (e.key === 'Escape') { closeUnitModal(); closeMobileMenu(); closeInquiryModal(); }
         });
+
+        // Inquiry success modal
+        const inquiryModal = document.getElementById('inquiryModal');
+        const imBackdrop = document.getElementById('imBackdrop');
+        const imDialog = document.getElementById('imDialog');
+        let imCloseTimer;
+
+        function openInquiryModal() {
+            const isPt = window.__lang === 'pt';
+            document.getElementById('imTitle').textContent = isPt ? 'Obrigado!' : 'Thank You!';
+            document.getElementById('imMessage').textContent = isPt
+                ? 'O seu pedido foi recebido com sucesso. A nossa equipa entrará em contacto consigo brevemente.'
+                : 'Your inquiry has been received. Our team will get back to you shortly.';
+            document.querySelector('#imDialog > button.btn-shine').textContent = isPt ? 'Fechar' : 'Close';
+            clearTimeout(imCloseTimer);
+            inquiryModal.classList.remove('hidden');
+            inquiryModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+            requestAnimationFrame(() => {
+                imBackdrop.classList.remove('opacity-0');
+                imDialog.classList.remove('opacity-0', 'scale-95', 'translate-y-2');
+            });
+        }
+
+        function closeInquiryModal() {
+            if (inquiryModal.classList.contains('hidden')) return;
+            imBackdrop.classList.add('opacity-0');
+            imDialog.classList.add('opacity-0', 'scale-95', 'translate-y-2');
+            document.body.style.overflow = '';
+            imCloseTimer = setTimeout(() => {
+                inquiryModal.classList.add('hidden');
+                inquiryModal.classList.remove('flex');
+            }, 300);
+        }
 
         // Contact form submission (Web3Forms)
         async function submitContactForm(event) {
@@ -939,8 +986,8 @@ SONETO
                 });
                 const data = await res.json();
                 if (data.success) {
-                    alert(isPt ? 'Pedido enviado com sucesso!' : 'Inquiry sent successfully!');
                     form.reset();
+                    openInquiryModal();
                 } else {
                     throw new Error(data.message || 'Submission failed');
                 }
