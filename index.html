@@ -342,7 +342,8 @@ View Plans
 </div>
 <div id="unitGrid" class="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory pb-4 no-scrollbar -mr-margin-mobile pr-margin-mobile md:mr-0 md:pr-0">
 <!-- T2 Card -->
-<div class="bg-surface rounded-xl p-6 border border-outline-variant/30 hover:shadow-xl transition-shadow group snap-start shrink-0 w-full sm:w-[calc(50%-0.5rem)] md:w-[calc(50%-0.75rem)] lift">
+<div class="group snap-start shrink-0 w-full sm:w-[calc(50%-0.5rem)] md:w-[calc(50%-0.75rem)]">
+<div class="bg-surface rounded-xl p-6 border border-outline-variant/30 transition-[transform,box-shadow] duration-[450ms] ease-[cubic-bezier(0.16,0.84,0.44,1)] group-hover:shadow-xl group-hover:-translate-y-2">
 <div class="relative aspect-square rounded-lg mb-6 overflow-hidden">
 <img loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/unit-2br.jpg?v=4" alt="Two bedroom residence interior">
 <div class="absolute inset-0 bg-gradient-to-t from-on-surface/70 via-on-surface/10 to-transparent"></div>
@@ -355,32 +356,35 @@ View Plans
 <p class="text-on-surface-variant mb-4">70–120m² • T2</p>
 <div class="flex items-center gap-4 text-on-surface-variant mb-6 text-sm">
 <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">bed</span> 2</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">balcony</span> Varies</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">balcony</span> Yes</span>
 </div>
 <div class="flex justify-between items-center pt-4 border-t border-surface-variant">
 <span class="font-label-md text-primary">From €320,000</span>
 <button onclick="openUnitModal('twobed')" class="text-tertiary font-label-md uppercase tracking-widest text-[12px] flex items-center gap-1">Details <span class="material-symbols-outlined text-[16px]">arrow_forward</span></button>
 </div>
 </div>
+</div>
 <!-- T3 Card -->
-<div class="bg-surface rounded-xl p-6 border border-outline-variant/30 hover:shadow-xl transition-shadow group snap-start shrink-0 w-full sm:w-[calc(50%-0.5rem)] md:w-[calc(50%-0.75rem)] lift border-primary/20 bg-primary/5">
+<div class="group snap-start shrink-0 w-full sm:w-[calc(50%-0.5rem)] md:w-[calc(50%-0.75rem)]">
+<div class="bg-surface rounded-xl p-6 border border-outline-variant/30 border-primary/20 bg-primary/5 transition-[transform,box-shadow] duration-[450ms] ease-[cubic-bezier(0.16,0.84,0.44,1)] group-hover:shadow-xl group-hover:-translate-y-2">
 <div class="relative aspect-square rounded-lg mb-6 overflow-hidden">
 <img loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/unit-3br.jpg?v=4" alt="Three bedroom residence interior">
 <div class="absolute inset-0 bg-gradient-to-t from-on-surface/70 via-on-surface/10 to-transparent"></div>
 <div class="absolute bottom-3 left-4 right-4 flex justify-between items-end text-white">
 <span class="font-headline-sm text-white drop-shadow">Three Bedroom</span>
-<span class="font-label-md text-[12px] bg-white/20 backdrop-blur px-2 py-0.5 rounded">From €320,000</span>
+<span class="font-label-md text-[12px] bg-white/20 backdrop-blur px-2 py-0.5 rounded">From €380,000</span>
 </div>
 </div>
 <h3 class="font-headline-sm text-on-surface mb-1">Three Bedroom</h3>
 <p class="text-on-surface-variant mb-4">70–120m² • T3</p>
 <div class="flex items-center gap-4 text-on-surface-variant mb-6 text-sm">
 <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">bed</span> 3</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">balcony</span> Varies</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">balcony</span> Yes</span>
 </div>
 <div class="flex justify-between items-center pt-4 border-t border-surface-variant">
-<span class="font-label-md text-primary">From €320,000</span>
+<span class="font-label-md text-primary">From €380,000</span>
 <button onclick="openUnitModal('threebed')" class="text-tertiary font-label-md uppercase tracking-widest text-[12px] flex items-center gap-1">Details <span class="material-symbols-outlined text-[16px]">arrow_forward</span></button>
+</div>
 </div>
 </div>
 </div>
@@ -402,45 +406,45 @@ View Plans
 <div class="md:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-y-12 gap-x-8" data-reveal-group>
 <div class="reveal group space-y-3">
 <div class="w-12 h-12 bg-surface-variant flex items-center justify-center rounded-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-md group-hover:bg-secondary-container">
-<span class="material-symbols-outlined text-tertiary">local_parking</span>
+<span class="material-symbols-outlined text-tertiary">train</span>
 </div>
-<h5 class="font-label-md uppercase">Private Parking</h5>
-<p class="text-xs text-on-surface-variant">Underground spots for every unit with EV charging.</p>
-</div>
-<div class="reveal group space-y-3">
-<div class="w-12 h-12 bg-surface-variant flex items-center justify-center rounded-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-md group-hover:bg-secondary-container">
-<span class="material-symbols-outlined text-tertiary">inventory_2</span>
-</div>
-<h5 class="font-label-md uppercase">Storage Units</h5>
-<p class="text-xs text-on-surface-variant">Additional lockable space in the basement.</p>
+<h5 class="font-label-md uppercase">25 Min to Lisbon</h5>
+<p class="text-xs text-on-surface-variant">A direct train connection puts central Lisbon within easy reach.</p>
 </div>
 <div class="reveal group space-y-3">
 <div class="w-12 h-12 bg-surface-variant flex items-center justify-center rounded-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-md group-hover:bg-secondary-container">
-<span class="material-symbols-outlined text-tertiary">elevator</span>
+<span class="material-symbols-outlined text-tertiary">countertops</span>
 </div>
-<h5 class="font-label-md uppercase">Silent Elevator</h5>
-<p class="text-xs text-on-surface-variant">Modern, energy-efficient elevator systems.</p>
-</div>
-<div class="reveal group space-y-3">
-<div class="w-12 h-12 bg-surface-variant flex items-center justify-center rounded-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-md group-hover:bg-secondary-container">
-<span class="material-symbols-outlined text-tertiary">yard</span>
-</div>
-<h5 class="font-label-md uppercase">Inner Courtyard</h5>
-<p class="text-xs text-on-surface-variant">A lush, landscaped garden retreat.</p>
+<h5 class="font-label-md uppercase">Marble Countertops</h5>
+<p class="text-xs text-on-surface-variant">Natural marble surfaces throughout the kitchen and bathrooms.</p>
 </div>
 <div class="reveal group space-y-3">
 <div class="w-12 h-12 bg-surface-variant flex items-center justify-center rounded-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-md group-hover:bg-secondary-container">
-<span class="material-symbols-outlined text-tertiary">pedal_bike</span>
+<span class="material-symbols-outlined text-tertiary">ac_unit</span>
 </div>
-<h5 class="font-label-md uppercase">Bike Storage</h5>
-<p class="text-xs text-on-surface-variant">Secure racks for your city explorations.</p>
+<h5 class="font-label-md uppercase">Air Conditioning</h5>
+<p class="text-xs text-on-surface-variant">Ducted air conditioning system throughout every residence.</p>
 </div>
 <div class="reveal group space-y-3">
 <div class="w-12 h-12 bg-surface-variant flex items-center justify-center rounded-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-md group-hover:bg-secondary-container">
-<span class="material-symbols-outlined text-tertiary">videocam</span>
+<span class="material-symbols-outlined text-tertiary">kitchen</span>
 </div>
-<h5 class="font-label-md uppercase">Smart Intercom</h5>
-<p class="text-xs text-on-surface-variant">Integrated security with mobile app control.</p>
+<h5 class="font-label-md uppercase">Miele Appliances</h5>
+<p class="text-xs text-on-surface-variant">Premium Miele appliances fully integrated into the kitchen.</p>
+</div>
+<div class="reveal group space-y-3">
+<div class="w-12 h-12 bg-surface-variant flex items-center justify-center rounded-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-md group-hover:bg-secondary-container">
+<span class="material-symbols-outlined text-tertiary">shower</span>
+</div>
+<h5 class="font-label-md uppercase">Hansgrohe Sanitaryware</h5>
+<p class="text-xs text-on-surface-variant">Hansgrohe fittings and fixtures in every bathroom.</p>
+</div>
+<div class="reveal group space-y-3">
+<div class="w-12 h-12 bg-surface-variant flex items-center justify-center rounded-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-md group-hover:bg-secondary-container">
+<span class="material-symbols-outlined text-tertiary">wb_sunny</span>
+</div>
+<h5 class="font-label-md uppercase">South-Facing Units</h5>
+<p class="text-xs text-on-surface-variant">Select residences oriented south for maximum natural light.</p>
 </div>
 </div>
 </div>
@@ -481,18 +485,10 @@ View Plans
 </div>
 </div>
 <div class="min-w-full relative aspect-[16/9]">
-<img loading="lazy" decoding="async" class="w-full h-full object-cover" src="assets/location.jpg?v=3" alt="The neighbourhood from above">
-<div class="absolute inset-0 bg-gradient-to-t from-on-surface/70 to-transparent"></div>
-<div class="absolute bottom-6 left-6 md:bottom-10 md:left-10 text-white">
-<span class="font-label-md text-[12px] uppercase tracking-widest bg-white/20 backdrop-blur px-3 py-1 rounded-full">04 — Location</span>
-<h3 class="font-headline-lg text-headline-md md:text-headline-lg mt-3 drop-shadow">Rooted in a Vibrant District</h3>
-</div>
-</div>
-<div class="min-w-full relative aspect-[16/9]">
 <img loading="lazy" decoding="async" class="w-full h-full object-cover" src="assets/bathroom.jpg" alt="Spa-inspired bathroom with walk-in shower">
 <div class="absolute inset-0 bg-gradient-to-t from-on-surface/70 to-transparent"></div>
 <div class="absolute bottom-6 left-6 md:bottom-10 md:left-10 text-white">
-<span class="font-label-md text-[12px] uppercase tracking-widest bg-white/20 backdrop-blur px-3 py-1 rounded-full">05 — Bath</span>
+<span class="font-label-md text-[12px] uppercase tracking-widest bg-white/20 backdrop-blur px-3 py-1 rounded-full">04 — Bath</span>
 <h3 class="font-headline-lg text-headline-md md:text-headline-lg mt-3 drop-shadow">Spa-Inspired Bathrooms</h3>
 </div>
 </div>
@@ -500,7 +496,7 @@ View Plans
 <img loading="lazy" decoding="async" class="w-full h-full object-cover" src="assets/entrance.jpg" alt="Building entrance lobby with mailboxes and staircase">
 <div class="absolute inset-0 bg-gradient-to-t from-on-surface/70 to-transparent"></div>
 <div class="absolute bottom-6 left-6 md:bottom-10 md:left-10 text-white">
-<span class="font-label-md text-[12px] uppercase tracking-widest bg-white/20 backdrop-blur px-3 py-1 rounded-full">06 — Arrival</span>
+<span class="font-label-md text-[12px] uppercase tracking-widest bg-white/20 backdrop-blur px-3 py-1 rounded-full">05 — Arrival</span>
 <h3 class="font-headline-lg text-headline-md md:text-headline-lg mt-3 drop-shadow">A Considered Arrival</h3>
 </div>
 </div>
@@ -544,24 +540,27 @@ View Plans
 </div>
 </div>
 <div class="reveal reveal-right bg-white rounded-2xl p-8 md:p-10 text-on-surface shadow-2xl">
-<form class="space-y-6" onsubmit="event.preventDefault(); alert(window.__lang === 'pt' ? 'Pedido enviado com sucesso!' : 'Inquiry sent successfully!')">
+<form id="contactForm" class="space-y-6" onsubmit="submitContactForm(event)">
+<input type="hidden" name="access_key" value="352235da-376d-45de-b3aa-9858ad39a25c">
+<input type="hidden" name="subject" value="New Inquiry - Soneto Residences">
+<input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
 <div class="grid grid-cols-2 gap-4">
 <div class="space-y-2">
 <label class="font-label-md text-xs uppercase tracking-widest text-on-surface-variant">First Name</label>
-<input class="w-full bg-surface border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-3" placeholder="John" type="text">
+<input class="w-full bg-surface border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-3" name="first_name" placeholder="John" type="text" required>
 </div>
 <div class="space-y-2">
 <label class="font-label-md text-xs uppercase tracking-widest text-on-surface-variant">Last Name</label>
-<input class="w-full bg-surface border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-3" placeholder="Doe" type="text">
+<input class="w-full bg-surface border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-3" name="last_name" placeholder="Doe" type="text" required>
 </div>
 </div>
 <div class="space-y-2">
 <label class="font-label-md text-xs uppercase tracking-widest text-on-surface-variant">Email Address</label>
-<input class="w-full bg-surface border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-3" placeholder="john@example.com" type="email">
-</div><div class="space-y-2"><label class="font-label-md text-xs uppercase tracking-widest text-on-surface-variant">Phone Number</label><input class="w-full bg-surface border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-3" placeholder="+351 ..." type="tel"></div>
+<input class="w-full bg-surface border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-3" name="email" placeholder="john@example.com" type="email" required>
+</div><div class="space-y-2"><label class="font-label-md text-xs uppercase tracking-widest text-on-surface-variant">Phone Number</label><input class="w-full bg-surface border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-3" name="phone" placeholder="+351 ..." type="tel"></div>
 <div class="space-y-2">
 <label class="font-label-md text-xs uppercase tracking-widest text-on-surface-variant">Interested In</label>
-<select class="w-full bg-surface border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-3">
+<select class="w-full bg-surface border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-3" name="interested_in">
 <option>Two Bedroom</option>
 <option>Three Bedroom</option>
 <option>General Information</option>
@@ -569,9 +568,9 @@ View Plans
 </div>
 <div class="space-y-2">
 <label class="font-label-md text-xs uppercase tracking-widest text-on-surface-variant">Message (Optional)</label>
-<textarea class="w-full bg-surface border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-3" placeholder="Tell us more about what you are looking for..." rows="3"></textarea>
+<textarea class="w-full bg-surface border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-3" name="message" placeholder="Tell us more about what you are looking for..." rows="3"></textarea>
 </div>
-<button class="btn-shine w-full bg-primary text-on-primary py-4 rounded-lg font-label-md hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.98] transition-all" type="submit">Send Inquiry</button>
+<button id="contactSubmitBtn" class="btn-shine w-full bg-primary text-on-primary py-4 rounded-lg font-label-md hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.98] transition-all disabled:opacity-60" type="submit">Send Inquiry</button>
 </form>
 </div>
 </div>
@@ -624,7 +623,7 @@ View Plans
 SONETO
 </a>
 <p class="font-body-md text-body-md text-on-surface-variant text-center md:text-left max-w-xs">
-                    Crafted by Acme Developments. Feijó, Almada.
+                    Developed by Bohemian Group.
                 </p>
 </div>
 <div class="flex flex-col items-center gap-6">
@@ -826,7 +825,7 @@ SONETO
                 price: "From €320,000",
                 beds: "2",
                 image: "assets/unit-2br.jpg?v=4",
-                features: ["Open-plan living & dining", "Fitted kitchen", "Private storage", "Some units with balcony"],
+                features: ["Open-plan living & dining", "Miele kitchens", "Marble countertops", "Ensuite in select units", "All units with balconies"],
                 desc: "A well-proportioned two-bedroom residence with an open living and dining area. Gross area ranges from 70 to 120 m² depending on floor and orientation."
             },
             threebed: {
@@ -834,10 +833,10 @@ SONETO
                 badge: "T3 Residence",
                 subtitle: "70–120m² • T3",
                 area: "70–120 m²",
-                price: "From €320,000",
+                price: "From €380,000",
                 beds: "3",
                 image: "assets/unit-3br.jpg?v=4",
-                features: ["Open-plan living & dining", "Fitted kitchen", "Ensuite in select units", "Some units with balcony"],
+                features: ["Open-plan living & dining", "Miele kitchens", "Marble countertops", "Ensuite in select units", "All units with balconies"],
                 desc: "A spacious three-bedroom residence with open living and dining. Gross area ranges from 70 to 120 m² depending on floor and orientation."
             }
         };
@@ -922,6 +921,37 @@ SONETO
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') { closeUnitModal(); closeMobileMenu(); }
         });
+
+        // Contact form submission (Web3Forms)
+        async function submitContactForm(event) {
+            event.preventDefault();
+            const form = event.target;
+            const btn = document.getElementById('contactSubmitBtn');
+            const isPt = window.__lang === 'pt';
+            btn.disabled = true;
+            const originalLabel = btn.textContent;
+            btn.textContent = isPt ? 'A enviar...' : 'Sending...';
+            try {
+                const res = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+                    body: JSON.stringify(Object.fromEntries(new FormData(form)))
+                });
+                const data = await res.json();
+                if (data.success) {
+                    alert(isPt ? 'Pedido enviado com sucesso!' : 'Inquiry sent successfully!');
+                    form.reset();
+                } else {
+                    throw new Error(data.message || 'Submission failed');
+                }
+            } catch (err) {
+                console.error('[contact form]', err);
+                alert(isPt ? 'Não foi possível enviar o pedido. Tente novamente ou contacte-nos diretamente.' : 'Could not send your inquiry. Please try again or contact us directly.');
+            } finally {
+                btn.disabled = false;
+                btn.textContent = originalLabel;
+            }
+        }
     </script>
 <script>
         // ===== Internationalisation (EN <-> PT) =====
@@ -962,25 +992,26 @@ SONETO
             "Two Bedroom": "Dois Quartos",
             "Three Bedroom": "Três Quartos",
             "From €320,000": "Desde €320.000",
-            "Varies": "Variável",
+            "From €380,000": "Desde €380.000",
+            "Yes": "Sim",
             "Details": "Detalhes",
             // Amenities
             "Designed for Living, Not Just Staying.": "Concebido para Viver, Não Apenas Ficar.",
             "Every detail at Soneto has been curated to enhance your daily rituals. From the acoustic insulation to the thermal efficiency of our A-rated energy systems.": "Cada detalhe na Soneto foi cuidado para enriquecer os seus rituais diários. Do isolamento acústico à eficiência térmica dos nossos sistemas de energia com classificação A.",
             "Energy Class A": "Classe Energética A",
             "Sustainable cooling and heating solutions for a lower ecological footprint and year-round comfort.": "Soluções sustentáveis de aquecimento e arrefecimento para uma menor pegada ecológica e conforto durante todo o ano.",
-            "Private Parking": "Estacionamento Privado",
-            "Underground spots for every unit with EV charging.": "Lugares subterrâneos para cada unidade com carregamento elétrico.",
-            "Storage Units": "Arrecadações",
-            "Additional lockable space in the basement.": "Espaço adicional trancável na cave.",
-            "Silent Elevator": "Elevador Silencioso",
-            "Modern, energy-efficient elevator systems.": "Sistemas de elevador modernos e energeticamente eficientes.",
-            "Inner Courtyard": "Pátio Interior",
-            "A lush, landscaped garden retreat.": "Um refúgio ajardinado e exuberante.",
-            "Bike Storage": "Estacionamento de Bicicletas",
-            "Secure racks for your city explorations.": "Suportes seguros para as suas explorações pela cidade.",
-            "Smart Intercom": "Intercomunicador Inteligente",
-            "Integrated security with mobile app control.": "Segurança integrada com controlo por aplicação móvel.",
+            "25 Min to Lisbon": "25 Min a Lisboa",
+            "A direct train connection puts central Lisbon within easy reach.": "Uma ligação direta de comboio coloca o centro de Lisboa a curta distância.",
+            "Marble Countertops": "Bancadas em Mármore",
+            "Natural marble surfaces throughout the kitchen and bathrooms.": "Superfícies em mármore natural na cozinha e nas casas de banho.",
+            "Air Conditioning": "Ar Condicionado",
+            "Ducted air conditioning system throughout every residence.": "Sistema de ar condicionado canalizado em toda a residência.",
+            "Miele Appliances": "Eletrodomésticos Miele",
+            "Premium Miele appliances fully integrated into the kitchen.": "Eletrodomésticos Miele premium totalmente integrados na cozinha.",
+            "Hansgrohe Sanitaryware": "Loiça Sanitária Hansgrohe",
+            "Hansgrohe fittings and fixtures in every bathroom.": "Torneiras e acessórios Hansgrohe em cada casa de banho.",
+            "South-Facing Units": "Unidades Viradas a Sul",
+            "Select residences oriented south for maximum natural light.": "Residências selecionadas orientadas a sul para luz natural máxima.",
             // Gallery
             "Gallery": "Galeria",
             "A Glimpse Inside Soneto": "Um Vislumbre da Soneto",
@@ -990,11 +1021,9 @@ SONETO
             "Warm, Light-Filled Interiors": "Interiores Quentes e Cheios de Luz",
             "03 — Residences": "03 — Residências",
             "Designed for Everyday Comfort": "Concebido para o Conforto Diário",
-            "04 — Location": "04 — Localização",
-            "Rooted in a Vibrant District": "Enraizado num Bairro Vibrante",
-            "05 — Bath": "05 — Banho",
+            "04 — Bath": "04 — Banho",
             "Spa-Inspired Bathrooms": "Casas de Banho Inspiradas em Spa",
-            "06 — Arrival": "06 — Chegada",
+            "05 — Arrival": "05 — Chegada",
             "A Considered Arrival": "Uma Chegada Pensada ao Detalhe",
             // Contact
             "Start Your Journey with Soneto.": "Comece a Sua Jornada com a Soneto.",
@@ -1016,7 +1045,7 @@ SONETO
             "Features": "Características",
             "Inquire About This Unit": "Pedir Informações Sobre Esta Unidade",
             // Footer
-            "Crafted by Acme Developments. Feijó, Almada.": "Criado pela Acme Developments. Feijó, Almada.",
+            "Developed by Bohemian Group.": "Desenvolvido pela Bohemian Group.",
             "Developer Info": "Informação do Promotor",
             "Legal Notice": "Aviso Legal",
             "Privacy Policy": "Política de Privacidade",
@@ -1034,10 +1063,10 @@ SONETO
         // Portuguese modal data
         window.__UNIT_PT = {
             twobed: { title:"Dois Quartos", badge:"Residência T2", subtitle:"70–120m² • T2", area:"70–120 m²", price:"Desde €320.000", beds:"2", image:"assets/unit-2br.jpg?v=4",
-                features:["Sala e refeições em open-space","Cozinha equipada","Arrecadação privada","Alguns fogos com varanda"],
+                features:["Sala e refeições em open-space","Cozinhas Miele","Bancadas em mármore","Suite em fogos selecionados","Todos os fogos com varanda"],
                 desc:"Uma residência de dois quartos bem proporcionada, com sala e zona de refeições em open-space. Área bruta entre 70 e 120 m², consoante o piso e a orientação." },
-            threebed: { title:"Três Quartos", badge:"Residência T3", subtitle:"70–120m² • T3", area:"70–120 m²", price:"Desde €320.000", beds:"3", image:"assets/unit-3br.jpg?v=4",
-                features:["Sala e refeições em open-space","Cozinha equipada","Suite em fogos selecionados","Alguns fogos com varanda"],
+            threebed: { title:"Três Quartos", badge:"Residência T3", subtitle:"70–120m² • T3", area:"70–120 m²", price:"Desde €380.000", beds:"3", image:"assets/unit-3br.jpg?v=4",
+                features:["Sala e refeições em open-space","Cozinhas Miele","Bancadas em mármore","Suite em fogos selecionados","Todos os fogos com varanda"],
                 desc:"Uma residência espaçosa de três quartos, com sala e zona de refeições em open-space. Área bruta entre 70 e 120 m², consoante o piso e a orientação." }
         };
 
