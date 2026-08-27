@@ -298,9 +298,9 @@ SONETO
 <p class="reveal text-on-surface-variant" data-reveal-delay="120">Perfectly positioned between the lively arts quarter and the quiet residential streets of the old town.</p>
 </div>
 <div class="reveal reveal-scale relative h-[600px] rounded-2xl overflow-hidden border border-outline-variant/30 shadow-inner bg-surface-variant">
-<!-- Stylized Map Placeholder -->
+<!-- Live Google Map -->
 <div class="absolute inset-0">
-<img loading="lazy" decoding="async" class="w-full h-full object-cover opacity-80" src="assets/location.jpg?v=3" alt="Aerial view of the surrounding neighborhood">
+<iframe class="w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Soneto Residences location map" src="https://www.google.com/maps?q=38.6599482,-9.1637386&z=15&output=embed"></iframe>
 </div>
 <!-- POI List Overlay (Desktop) -->
 <div class="absolute bottom-4 left-4 right-4 md:left-auto md:bottom-8 md:right-8 md:w-80 bg-white/90 backdrop-blur-lg p-5 md:p-6 rounded-xl shadow-xl border border-white space-y-4">
@@ -348,6 +348,7 @@ View Plans
 <div class="absolute inset-0 bg-gradient-to-t from-on-surface/70 via-on-surface/10 to-transparent"></div>
 <div class="absolute bottom-3 left-4 right-4 flex justify-between items-end text-white">
 <span class="font-headline-sm text-white drop-shadow">Two Bedroom</span>
+<span class="font-label-md text-[12px] bg-white/20 backdrop-blur px-2 py-0.5 rounded">From €320,000</span>
 </div>
 </div>
 <h3 class="font-headline-sm text-on-surface mb-1">Two Bedroom</h3>
@@ -356,7 +357,8 @@ View Plans
 <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">bed</span> 2</span>
 <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">balcony</span> Varies</span>
 </div>
-<div class="flex justify-end items-center pt-4 border-t border-surface-variant">
+<div class="flex justify-between items-center pt-4 border-t border-surface-variant">
+<span class="font-label-md text-primary">From €320,000</span>
 <button onclick="openUnitModal('twobed')" class="text-tertiary font-label-md uppercase tracking-widest text-[12px] flex items-center gap-1">Details <span class="material-symbols-outlined text-[16px]">arrow_forward</span></button>
 </div>
 </div>
@@ -367,6 +369,7 @@ View Plans
 <div class="absolute inset-0 bg-gradient-to-t from-on-surface/70 via-on-surface/10 to-transparent"></div>
 <div class="absolute bottom-3 left-4 right-4 flex justify-between items-end text-white">
 <span class="font-headline-sm text-white drop-shadow">Three Bedroom</span>
+<span class="font-label-md text-[12px] bg-white/20 backdrop-blur px-2 py-0.5 rounded">From €320,000</span>
 </div>
 </div>
 <h3 class="font-headline-sm text-on-surface mb-1">Three Bedroom</h3>
@@ -375,7 +378,8 @@ View Plans
 <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">bed</span> 3</span>
 <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">balcony</span> Varies</span>
 </div>
-<div class="flex justify-end items-center pt-4 border-t border-surface-variant">
+<div class="flex justify-between items-center pt-4 border-t border-surface-variant">
+<span class="font-label-md text-primary">From €320,000</span>
 <button onclick="openUnitModal('threebed')" class="text-tertiary font-label-md uppercase tracking-widest text-[12px] flex items-center gap-1">Details <span class="material-symbols-outlined text-[16px]">arrow_forward</span></button>
 </div>
 </div>
@@ -588,10 +592,14 @@ View Plans
 <h3 id="umTitle" class="font-headline-md text-headline-md text-on-surface leading-tight"></h3>
 <p id="umSubtitle" class="text-on-surface-variant text-sm"></p>
 </div>
-<div class="grid grid-cols-2 gap-2.5">
+<div class="grid grid-cols-3 gap-2.5">
 <div class="bg-surface-container-high rounded-lg px-3 py-2">
 <p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Area</p>
 <p id="umArea" class="font-headline-sm text-body-lg text-primary"></p>
+</div>
+<div class="bg-surface-container-high rounded-lg px-3 py-2">
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Price From</p>
+<p id="umPrice" class="font-headline-sm text-body-lg text-primary"></p>
 </div>
 <div class="bg-surface-container-high rounded-lg px-3 py-2">
 <p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Bedrooms</p>
@@ -815,6 +823,7 @@ SONETO
                 badge: "T2 Residence",
                 subtitle: "70–120m² • T2",
                 area: "70–120 m²",
+                price: "From €320,000",
                 beds: "2",
                 image: "assets/unit-2br.jpg?v=4",
                 features: ["Open-plan living & dining", "Fitted kitchen", "Private storage", "Some units with balcony"],
@@ -825,6 +834,7 @@ SONETO
                 badge: "T3 Residence",
                 subtitle: "70–120m² • T3",
                 area: "70–120 m²",
+                price: "From €320,000",
                 beds: "3",
                 image: "assets/unit-3br.jpg?v=4",
                 features: ["Open-plan living & dining", "Fitted kitchen", "Ensuite in select units", "Some units with balcony"],
@@ -850,6 +860,7 @@ SONETO
             document.getElementById('umTitle').textContent = d.title;
             document.getElementById('umSubtitle').textContent = d.subtitle;
             document.getElementById('umArea').textContent = d.area;
+            document.getElementById('umPrice').textContent = d.price;
             document.getElementById('umBeds').textContent = d.beds;
             document.getElementById('umDesc').textContent = d.desc;
             const ul = document.getElementById('umFeatures');
@@ -950,6 +961,7 @@ SONETO
             "View Plans": "Ver Plantas",
             "Two Bedroom": "Dois Quartos",
             "Three Bedroom": "Três Quartos",
+            "From €320,000": "Desde €320.000",
             "Varies": "Variável",
             "Details": "Detalhes",
             // Amenities
@@ -999,6 +1011,7 @@ SONETO
             "Send Inquiry": "Enviar Pedido",
             // Modal static labels
             "Area": "Área",
+            "Price From": "Preço Desde",
             "Bedrooms": "Quartos",
             "Features": "Características",
             "Inquire About This Unit": "Pedir Informações Sobre Esta Unidade",
@@ -1020,10 +1033,10 @@ SONETO
 
         // Portuguese modal data
         window.__UNIT_PT = {
-            twobed: { title:"Dois Quartos", badge:"Residência T2", subtitle:"70–120m² • T2", area:"70–120 m²", beds:"2", image:"assets/unit-2br.jpg?v=4",
+            twobed: { title:"Dois Quartos", badge:"Residência T2", subtitle:"70–120m² • T2", area:"70–120 m²", price:"Desde €320.000", beds:"2", image:"assets/unit-2br.jpg?v=4",
                 features:["Sala e refeições em open-space","Cozinha equipada","Arrecadação privada","Alguns fogos com varanda"],
                 desc:"Uma residência de dois quartos bem proporcionada, com sala e zona de refeições em open-space. Área bruta entre 70 e 120 m², consoante o piso e a orientação." },
-            threebed: { title:"Três Quartos", badge:"Residência T3", subtitle:"70–120m² • T3", area:"70–120 m²", beds:"3", image:"assets/unit-3br.jpg?v=4",
+            threebed: { title:"Três Quartos", badge:"Residência T3", subtitle:"70–120m² • T3", area:"70–120 m²", price:"Desde €320.000", beds:"3", image:"assets/unit-3br.jpg?v=4",
                 features:["Sala e refeições em open-space","Cozinha equipada","Suite em fogos selecionados","Alguns fogos com varanda"],
                 desc:"Uma residência espaçosa de três quartos, com sala e zona de refeições em open-space. Área bruta entre 70 e 120 m², consoante o piso e a orientação." }
         };
